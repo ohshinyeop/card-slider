@@ -33,6 +33,8 @@ export default function Card({ width, height, colorArr }: CardProps) {
   const [fliptime, setFliptime] = useState(0);
 
   const handleMouseDown = (e: any) => {
+    e.preventDefault();
+
     setStartX(e.type === "touchstart" ? e.touches[0].clientX : e.clientX);
     setIsDragging(true);
     setDirection("none");
@@ -41,6 +43,7 @@ export default function Card({ width, height, colorArr }: CardProps) {
 
   const handleMove = (e: React.TouchEvent | React.MouseEvent) => {
     if (!isDragging) return;
+    e.preventDefault();
 
     let clientX = 0;
     if (e.nativeEvent instanceof TouchEvent) {

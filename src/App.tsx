@@ -17,7 +17,7 @@ function App() {
         </div>
 
         <Card
-          width={384}
+          width={300}
           height={60}
           colorArr={["red", "orange", "green", "blue"]}
         ></Card>
