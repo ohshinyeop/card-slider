@@ -1,0 +1,51 @@
+.root {
+  overflow: hidden;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  flex-direction: column;
+  padding: 30px;
+
+  .cardRoot {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .swipe {
+    color: black;
+    z-index: 999;
+  }
+
+  .cardOverlay {
+    cursor: pointer;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+  .card {
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    font-weight: bold;
+    border-radius: 8px;
+  }
+}
+
+// 720px 이하에서 미디어 쿼리
+@media (max-width: 720px) {
+  .root {
+    .cardOverlay {
+      width: 80vw;
+    }
+    .card {
+      width: 80vw;
+    }
+  }
+}
